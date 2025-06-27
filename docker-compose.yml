@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    
+    image: klerith/teslo-shop-backend:2.5.0
+    container_name: frontend-reto
+    ports:
+      - ${PORT}:${PORT}
+    environment:
+      APP_VERSION: ${APP_VERSION}
+      PORT: ${PORT}
+      
