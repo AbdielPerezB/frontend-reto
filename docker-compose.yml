@@ -4,11 +4,13 @@ services:
       context: .
       dockerfile: Dockerfile
     
-    image: klerith/teslo-shop-backend:2.5.0
+    image: frontend-reto
     container_name: frontend-reto
     ports:
-      - ${PORT}:${PORT}
+      - 3000:${PORT}
     environment:
       APP_VERSION: ${APP_VERSION}
       PORT: ${PORT}
+      GEMINI_MODEL: ${GEMINI_MODEL}
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
       
